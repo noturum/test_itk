@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>NE</th>
+          <th>Address</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>GSM</th>
+          <th>UMTS</th>
+          <th>LTE</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td>{{ row.ne }}</td>
+          <td>{{ row.address }}</td>
+          <td>{{ row.latitude }}</td>
+          <td>{{ row.longitude }}</td>
+          <td>{{ row.gsm }}</td>
+          <td>{{ row.umts }}</td>
+          <td>{{ row.lte }}</td>
+          <td>{{ row.status }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if not data %}
+    <p>empty</p>
+    {% endif %}
+  </body>
+</html>
